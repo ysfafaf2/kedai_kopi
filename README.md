@@ -1,3 +1,5 @@
+https://ysfafaf2.github.io/kedai_kopi/
+
 Jawaban Pertanyaan Tugas Poin 6 Minggu 2
 
 1. Apa yang muncul di address bar setelah form dikirim, dan mengapa data form tampil di sana? Hubungkan dengan materi method HTTP di Minggu 1.
@@ -12,10 +14,9 @@ Jawaban Pertanyaan Tugas Poin 6 Minggu 2
      Alasannya karena `<nav>` memiliki makna semantik yang jelas dan biasa digunakan untuk mendefinisikan blok navigasi utama situs web.
      Berbeda dengan `<div>` yang sifatnya lebih generik, penggunaan `<nav>` membantu mesin pencari dan
      screen reader untuk mengenali bagian tersebut sebagai menu navigasi web kita.
+     
 
 Jawaban Pertanyaan Tugas Poin 8 Minggu 3
-
-https://ysfafaf2.github.io/kedai_kopi/
 
 1. Sebutkan satu bagian yang kamu susun dengan Flexbox dan satu bagian dengan Grid. Mengapa pilihan itu cocok untuk kedua bagian tersebut?
    - Bagian yang disusun dengan Flexbox adalah area header/navigasi .header-inner dan .nav-list, karena
