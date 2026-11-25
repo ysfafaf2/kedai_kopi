@@ -1,0 +1,253 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --warna-utama: #3b2314;
+    --warna-latar: #f7f3ee;
+    --warna-aksen: #935a2f;
+    --warna-putih: #ffffff;
+    --warna-border: #d8cbb8;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--warna-utama);
+    background-color: var(--warna-latar);
+}
+
+/* Kontainer Tengah */
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.site-main {
+    flex: 1;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* Header & Navigasi */
+.site-header {
+    background-color: var(--warna-utama);
+    color: var(--warna-putih);
+    padding: 1rem 0;
+}
+
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-list a {
+    color: var(--warna-putih);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-list a:hover {
+    background-color: var(--warna-aksen);
+    color: var(--warna-putih);
+}
+
+/* Beranda */
+section {
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.hours-list {
+    padding-left: 1.25rem;
+}
+
+/* Daftar Menu */
+.menu-category {
+    margin-bottom: 2.25rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.menu-card {
+    background-color: var(--warna-putih);
+    border: 1px solid var(--warna-border);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.menu-card h4 {
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+}
+
+.menu-price {
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+    color: var(--warna-aksen);
+}
+
+.menu-desc {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Form Pemesanan */
+.order-form {
+    background-color: var(--warna-putih);
+    border: 1px solid var(--warna-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    max-width: 960px;
+}
+
+.form-group {
+    margin-bottom: 1.15rem;
+}
+
+.form-group label,
+.form-label-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.form-label-title {
+    margin-top: 0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--warna-utama);
+    background-color: var(--warna-latar);
+    border: 1px solid var(--warna-border);
+    border-radius: 6px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--warna-aksen);
+    outline-offset: 1px;
+    border-color: var(--warna-aksen);
+    background-color: var(--warna-putih);
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400 !important;
+    margin-bottom: 0 !important;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: var(--warna-aksen);
+    color: var(--warna-putih);
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: var(--warna-utama);
+}
+
+.submit-btn:focus {
+    outline: 2px solid var(--warna-utama);
+    outline-offset: 2px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--warna-utama);
+    color: var(--warna-putih);
+    padding: 1.25rem 0;
+    font-size: 0.92rem;
+}
+
+.site-footer p {
+    margin: 0.25rem 0;
+}
+
+/* Tablet & Desktop: mulai 600px */
+@media (min-width: 600px) {
+    .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .radio-group {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+}
+
+/* Layar Lebar: mulai 960px */
+@media (min-width: 960px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
